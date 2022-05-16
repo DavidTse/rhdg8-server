@@ -9,8 +9,8 @@ RHDG_CLUSTER_NAME=rhdg
 GRAFANA_NAMESPACE=grafana
 GRAFANA_DASHBOARD_NAME="grafana-dashboard-rhdg8"
 GRAFANA_DASHBOARD_KEY="dashboard.json"
-RHDG_AUTH_ENABLED=false
-RHDG_SSL_ENABLED=false
+RHDG_AUTH_ENABLED=true
+RHDG_SSL_ENABLED=true
 
 #############################
 ## Do not modify anything from this line
@@ -73,7 +73,8 @@ oc process -f rhdg-operator/rhdg-01-operator.yaml \
     -p CLUSTER_NAMESPACE=$RHDG_NAMESPACE | oc apply -f -
 
 echo -n "Waiting for pods ready..."
-while [[ $(oc get pods -l name=infinispan-operator -n $RHDG_OPERATOR_NAMESPACE -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do echo -n "." && sleep 1; done; echo -n -e "  [OK]\n"
+sleep 60s
+#while [[ $(oc get pods -l name=infinispan-operator -n $RHDG_OPERATOR_NAMESPACE -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do echo -n "." && sleep 1; done; echo -n -e "  [OK]\n"
 
 # Deploy the RHDG cluster
 echo -e "\n[2/8]Deploying the RHDG cluster"
