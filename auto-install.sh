@@ -3,11 +3,11 @@
 set -e
 
 # Set your environment variables here
-RHDG_OPERATOR_NAMESPACE=rhdg8-operator
+RHDG_OPERATOR_NAMESPACE=openshift-operators
 RHDG_NAMESPACE=rhdg8
 RHDG_CLUSTER_NAME=rhdg
 GRAFANA_NAMESPACE=grafana
-GRAFANA_DASHBOARD_NAME="grafana-dashboard-rhdg8"
+GRAFANA_DASHBOARD_NAME="grafana-general-dashboard"
 GRAFANA_DASHBOARD_KEY="dashboard.json"
 RHDG_AUTH_ENABLED=true
 RHDG_SSL_ENABLED=true

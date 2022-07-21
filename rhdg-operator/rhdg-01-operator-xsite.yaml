@@ -45,7 +45,7 @@ objects:
     name: datagrid-operator
     namespace: ${OPERATOR_NAMESPACE}
   spec:
-    channel: 8.1.x
+    channel: 8.3.x
     installPlanApproval: Automatic 
     name: datagrid
     source: redhat-operators

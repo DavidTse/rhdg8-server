@@ -106,7 +106,7 @@ objects:
     logging:
       categories:
         org.jgroups.protocols.TCP: error
-        org.jgroups.protocols.relay.RELAY2: fatal
+        org.jgroups.protocols.relay.RELAY2: error
     replicas: 3
     security:
       endpointEncryption:
@@ -132,12 +132,12 @@ objects:
             name: ${CLUSTER_NAME}
             namespace: ${CLUSTER_NAMESPACE}
             secretName: ${CLUSTER_NAME}-xsite-secret
-            url: openshift://api.apps.sandbox890.opentlc.com:6443
+            url: openshift://api.apps.cluster-2688q.2688q.sandbox40.opentlc.com:6443
           - #clusterName: ${CLUSTER_NAME_XSITE_REMOTE}
             name: ${CLUSTER_NAME_XSITE_REMOTE}
             namespace: ${CLUSTER_NAMESPACE_XSITE_REMOTE}
             secretName: ${CLUSTER_NAME_XSITE_REMOTE}-xsite-secret
-            url: openshift://api.apps.sandbox890.opentlc.com:6443
+            url: openshift://api.apps.cluster-2688q.2688q.sandbox40.opentlc.com:6443
       type: DataGrid
 parameters:
 # Local cluster data
