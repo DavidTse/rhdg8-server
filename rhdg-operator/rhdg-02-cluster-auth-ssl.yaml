@@ -106,7 +106,7 @@ objects:
       # categories:
       #   org.infinispan: debug
       #   org.jgroups: debug
-    replicas: 1
+    replicas: 3
     security:
       authorization:
         enabled: true
